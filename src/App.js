@@ -1,38 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import { useEffect, useState } from 'react';
+import { supabase } from './supabase';
 
 function App() {
-  return (
-    <label>
-      <center>
-        <header>
-          <big>
-          Upload Your Own Event!!
-          </big>
-          </header>
-      Name of the Event: <input name="name" />
-      <br></br>
-      Location: <input location="location" />
-      <br></br>
+  const [groceries, setGrocieries] = useState([]);
 
-      <label for="event-type">Choose Your Event Type:</label> 
-    <select name="event-type" id="event-type"> 
-        <option value="club">Club</option> 
-        <option value="frat">Frat</option> 
-        <option value="food-and-drink">Food and Drink</option> 
-        <option value="festival">Festival</option> 
-        <option value="concert">Concert</option> 
-        <option value="other">Other</option> 
-    </select>
-  
-<br></br>
+  useEffect(() => {
+    async function fetchGroceries() {
 
 
+      let { data: groceries, error } = await supabase
+        .from('groceries')
+        .select('*')
 
-      Description: <textarea description="description" cols="50" rows="10"></textarea>
-      </center>
-    </label>
-  );
+
+      if (groceries) {
+        setGrocieries(groceries);
+      } else {
+        console.log(error);
+      }
+    }
+    fetchGroceries();
+
+    //our fetch function
+  }, [])
+
+  return <div>
+    <h1>Grocery List</h1>
+    <ul>
+      {groceries.map(({ id, name, price }) => {
+        return <li key={id}>{name} - {price}</li>
+      })}
+    </ul>
+  </div>
 }
 
 export default App;
