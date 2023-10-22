@@ -1,38 +1,42 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Home from './Home';
+
+import * as React from "react";
+import { BrowserRouter as Router,
+  Routes,
+  Route,
+  Link } from 'react-router-dom';
+import AboutPage from './Aboutpage';
 
 function App() {
-  return (
-    <label>
-      <center>
-        <header>
-          <big>
-          Upload Your Own Event!!
-          </big>
-          </header>
-      Name of the Event: <input name="name" />
-      <br></br>
-      Location: <input location="location" />
-      <br></br>
+ return (
+  <Router>
+  <div>
+  <nav>
+    <ul>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="/upload-your-own-event">Upload Your Own Event</Link>
+      </li>
+    </ul>
+  </nav>
 
-      <label for="event-type">Choose Your Event Type:</label> 
-    <select name="event-type" id="event-type"> 
-        <option value="club">Club</option> 
-        <option value="frat">Frat</option> 
-        <option value="food-and-drink">Food and Drink</option> 
-        <option value="festival">Festival</option> 
-        <option value="concert">Concert</option> 
-        <option value="other">Other</option> 
-    </select>
-  
-<br></br>
-
-
-
-      Description: <textarea description="description" cols="50" rows="10"></textarea>
-      </center>
-    </label>
-  );
+  {
+    <Routes>
+    <Route path="/upload-your-own-event" element={<AboutPage/>}>
+    </Route>
+    <Route path="/users" element={<AboutPage/>}>
+    </Route>
+    <Route path="/" element={<Home/>}>
+    </Route>
+  </Routes>
+  }
+</div>
+</Router>
+ )
 }
 
 export default App;
