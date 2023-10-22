@@ -1,4 +1,24 @@
+import './App.css';
+
+/* import {
+    createBrowserRouter,
+    RouterProvider,
+  } from "react-router-dom";
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <center><a href="/createEvent">create</a></center>,//<Home />,
+    }, 
+    {
+      path: "/createEvent",
+      element: <Home />
+    }
+  ]); */
+
 export default function Home () {
+    
+
     return (
         <label>
           <center>
@@ -29,9 +49,9 @@ export default function Home () {
             Description: <textarea description="description" cols="50" rows="10"></textarea>
     
             <br></br>
-    
+            {/* <RouterProvider router={router} /> */}
             <a href="/mainPage">Create Event!</a>
-            {/* <Route
+           {/*  {<Route
               path="/mainPage"
               // the matching param will be available to the loader
               loader={({ params }) => {
@@ -40,7 +60,7 @@ export default function Home () {
               // and the action
               action={({ params }) => { }}
               element={<mainPage.js />}
-            />; */}
+            />} */}
           </center>
     
         </label>
