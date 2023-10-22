@@ -1,6 +1,7 @@
 
 import './App.css';
-import Home from './Home';
+import Home from './EventPage';
+// import mainPage from './mainPage';
 
 import * as React from "react";
 // import { Link } from 'react-router-dom';
@@ -12,18 +13,33 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <center><a href="/createEvent">create</a></center>,//<Home />,
+    path: "/mainPage",
+    element: <center><a href="/createEvent">create</a></center>
+   //  element: <center><a href="/events">Current Events!</a></center>
   }, 
   {
     path: "/createEvent",
     element: <Home />
   }
+/*   {
+    path: "/events",
+    element: <mainPage />
+  },
+
+  {
+    path: "/createEvent",
+    element: <center><a href="/">Create Event!</a></center>,
+  }, 
+  {
+    path: "/",
+    element: <App /> 
+  }*/
 ]);
 
 function App() {
 
   return <RouterProvider router={router} />
+
   
 }
 
