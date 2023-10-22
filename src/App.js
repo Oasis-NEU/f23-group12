@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Home';
 
 import * as React from "react";
-import * as ReactDOM from "react-dom/client";
+// import * as ReactDOM from "react-dom/client";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,17 +12,17 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <a href="/createEvent">create</a>,//<Home />,
-  },
+    element: <center><a href="/createEvent">create</a></center>,//<Home />,
+  }, 
   {
     path: "/createEvent",
-    element: <p>Create Event</p>
+    element: <Home />
   }
 ]);
 
 function App() {
 
-  return <RouterProvider router={router} />;
+  return <RouterProvider router={router} />
 }
 
 export default App;
