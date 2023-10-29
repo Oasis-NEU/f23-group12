@@ -27,6 +27,8 @@ function AboutPage() {
   
   
         Description: <textarea description="description" cols="50" rows="10"></textarea>
+        <br></br>
+        <button>Create!</button>
         </center>
       </label>
     );

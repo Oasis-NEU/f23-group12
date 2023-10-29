@@ -15,7 +15,7 @@
         #FF00DE, 0 0 15rem #FF00DE;
 }
 #logo{
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
 }
