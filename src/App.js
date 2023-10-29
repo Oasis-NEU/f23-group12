@@ -1,6 +1,11 @@
 
 import './App.css';
 import Home from './Home';
+import Clubs from './Clubs';
+import Frats from './Frats';
+import FoodDrink from './FoodDrink';
+import Concerts from './Concerts';
+import Other from './Other';
 
 import * as React from "react";
 import { BrowserRouter as Router,
@@ -31,6 +36,16 @@ function App() {
     <Route path="/users" element={<AboutPage/>}>
     </Route>
     <Route path="/" element={<Home/>}>
+    </Route>
+    <Route path="/clubs" element={<Clubs/>}>
+    </Route>
+    <Route path="/frats" element={<Frats/>}>
+    </Route>
+    <Route path="/concerts" element={<Concerts/>}>
+    </Route>
+    <Route path="/food-drinks" element={<FoodDrink/>}>
+    </Route>
+    <Route path="/other" element={<Other/>}>
     </Route>
   </Routes>
   }

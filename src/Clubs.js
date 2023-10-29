@@ -1,5 +1,5 @@
 function Clubs() {
-    return 
+    return  <p>clubs</p>
   }
 
   export default Clubs;
