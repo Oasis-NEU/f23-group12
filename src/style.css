@@ -26,3 +26,13 @@
     padding-left: 70px;
     text-align: left;
 }
+
+.home-button {
+    text-align: center;
+}
+.event-button {
+    text-align: center;
+}
+.button {
+    list-style: none;
+}

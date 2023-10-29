@@ -19,11 +19,11 @@ function App() {
   <Router>
   <div>
   <nav>
-    <ul>
-      <li>
+    <ul class = "button">
+      <li class = "home-button">
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li class = "event-button">
         <Link to="/upload-your-own-event">Upload Your Own Event</Link>
       </li>
     </ul>
