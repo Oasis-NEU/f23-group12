@@ -1,16 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import fratsoma from "./FratsomaLogo.png"
+import "./style.css"
 
 function Home() {
   return (
     <label>
       <center>
-        <header>
-          <big>
-            FRATSOMA!
-          </big>
-          <br /><br />
-        </header>
+      <header>
+              <section class ="Home-topPage">
+                <p> Fratsoma</p>
+              </section>
+              <section class ="Home-header">
+              <big>
+                Upload Your Own Event!!
+              </big>
+              </section>
+              <div id="logo">
+                <a href = "Home.js">
+              <img src= {fratsoma} alt= "fratsoma"
+              width="200"
+              height="200"/> </a>
+              </div>
+            </header>
         
         Welcome to Fratsoma, your gateway to the vibrant college community in Boston! We are a team of four ambitious and innovative female students from Northeastern University, driven by a shared passion for fostering connections and creating unforgettable experiences for our fellow students.
 
