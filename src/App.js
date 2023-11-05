@@ -1,4 +1,3 @@
-
 import './App.css';
 import Home from './Home';
 import Clubs from './Clubs';
@@ -6,6 +5,8 @@ import Frats from './Frats';
 import FoodDrink from './FoodDrink';
 import Concerts from './Concerts';
 import Other from './Other';
+import fratsoma from "./FratsomaLogo.png"
+
 
 import * as React from "react";
 import { BrowserRouter as Router,
@@ -14,9 +15,21 @@ import { BrowserRouter as Router,
   Link } from 'react-router-dom';
 import AboutPage from './Aboutpage';
 
+
+
+
 function App() {
  return (
   <Router>
+      <header>
+        <div id="logo">
+          <a href = "Home.js">
+        <img src= {fratsoma} alt= "fratsoma"
+        width="200"
+        height="200"/> </a>
+        </div>
+      </header>
+       
   <div>
   <nav>
     <ul class = "button">
@@ -28,6 +41,7 @@ function App() {
       </li>
     </ul>
   </nav>
+
 
   {
     <Routes>
@@ -53,5 +67,6 @@ function App() {
 </Router>
  )
 }
+
 
 export default App;

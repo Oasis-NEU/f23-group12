@@ -1,22 +1,6 @@
-.Home-header{
-    background-color: #F2E6FF;
-    color: #330080;
-    font-family: Tahoma;
-}
-.Home-topPage{
-    width: auto;
-    height: 500px;
-    background-image: linear-gradient(
-        to left bottom, #7C0D8B, #71148C, #661A8D, #5B1E8E,
-     #4E218E, #562D95, #5D389D, #6543A4, #815CB5, #9B76C7,
-      #B590D9, #CFACEB);
-      text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
-       0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
-        #FF00DE, 0 0 15rem #FF00DE;
-}
 #logo{
     position:absolute;
-    top:0;
+    top: 30px;
     left:0;
 }
 .Home-body{
@@ -27,12 +11,35 @@
     text-align: left;
 }
 
-.home-button {
-    text-align: center;
+
+
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
 }
-.event-button {
-    text-align: center;
+a {
+    text-decoration: none;
+    color: white;
+    font-family: "Candarda";
+    text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
+    0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
+     #FF00DE, 0 0 15rem #FF00DE;
 }
 .button {
     list-style: none;
+    font-family: "Cambria";
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    position: center;
+    width: auto;
+    height: 500px;
+    background-image: linear-gradient(
+        to left bottom, #7C0D8B, #71148C, #661A8D, #5B1E8E,
+     #4E218E, #562D95, #5D389D, #6543A4, #815CB5, #9B76C7,
+      #B590D9, #CFACEB);
 }
+
+
