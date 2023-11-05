@@ -1,5 +1,11 @@
 function Clubs() {
-    return  <p>clubs</p>
+    return(
+    <header>
+      <center class = "head-home">
+        Club
+        </center>
+    </header>
+    )
   }
 
   export default Clubs;

@@ -11,9 +11,6 @@
     text-align: left;
 }
 
-
-
-
 li {
     display: inline-block;
     margin-right: 20px;
@@ -40,6 +37,45 @@ a {
         to left bottom, #7C0D8B, #71148C, #661A8D, #5B1E8E,
      #4E218E, #562D95, #5D389D, #6543A4, #815CB5, #9B76C7,
       #B590D9, #CFACEB);
+}
+
+.head-home{
+    color:white;
+    font-size: 60px;
+    font-family: Tahoma;
+    position:absolute;
+    text-align: center;
+    top: 450px;
+    left: 45%;
+    text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
+    0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
+     #FF00DE, 0 0 15rem #FF00DE;
+}
+
+.food-home{
+    color:white;
+    font-size: 60px;
+    font-family: Tahoma;
+    position:absolute;
+    text-align: center;
+    top: 450px;
+    left: 37%;
+    text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
+    0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
+     #FF00DE, 0 0 15rem #FF00DE;
+}
+
+.concert-home {
+    color:white;
+    font-size: 60px;
+    font-family: Tahoma;
+    position:absolute;
+    text-align: center;
+    top: 450px;
+    left: 43%;
+    text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
+    0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
+     #FF00DE, 0 0 15rem #FF00DE;
 }
 
 

@@ -1,5 +1,11 @@
 function Concerts() {
-    return  <p>concerts</p>
+  return(
+    <header>
+      <center class = "concert-home">
+        Concerts
+        </center>
+    </header>
+    )
   }
 
   export default Concerts;

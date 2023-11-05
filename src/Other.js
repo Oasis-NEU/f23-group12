@@ -1,5 +1,11 @@
 function Other() {
-    return  <p>other</p>
+  return(
+    <header>
+      <center class = "head-home">
+        Other
+        </center>
+    </header>
+    )
   }
 
   export default Other;

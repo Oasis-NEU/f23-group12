@@ -1,5 +1,11 @@
 function FoodDrink() {
-    return  <p>Food & Drink</p>
+  return(
+    <header>
+      <center class = "food-home">
+        Food and Drinks
+        </center>
+    </header>
+    )
   }
 
   export default FoodDrink;

@@ -1,5 +1,11 @@
 function Frats() {
-    return  <p>frats</p>
+  return(
+    <header>
+      <center class = "head-home">
+        Frat
+        </center>
+    </header>
+    )
   }
 
   export default Frats;
