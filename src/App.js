@@ -69,7 +69,7 @@ function App() {
     </Route>
     <Route path="/users" element={<AboutPage/>}>
     </Route>
-    <Route path="/" element={<Home/>}>
+    <Route path="/" element={<Home events={events}/>}>
     </Route>
     <Route path="/clubs" element={<Clubs events = {events}/>}>
     </Route>

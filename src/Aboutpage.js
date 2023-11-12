@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {redirect } from "react-router-dom"
 
 function AboutPage({ formData, setFormData, setEvents, events }) {
   const [showFormData, setShowFormData] = useState(false);
@@ -19,18 +20,22 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
     const newEvent = {
       name: formData.name,
       location: formData.location,
-    eventType: formData.eventType,
-    textArea: formData.textAreas,
+      eventType: formData.eventType,
+      textArea: formData.textAreas,
     }
 
     setEvents([...events, newEvent])
 
     
     // reset form (Set all teh values in the form to "")
-    formData.name = ""
-    formData.location = ""
-    formData.eventType = ""
-    formData.textArea = ""
+    setFormData({
+      name: "",
+      location: "",
+      eventType: "",
+      textArea: ""
+    })
+
+    return redirect("/")
     
   };
 

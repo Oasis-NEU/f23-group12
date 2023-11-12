@@ -78,4 +78,19 @@ a {
      #FF00DE, 0 0 15rem #FF00DE;
 }
 
+button {
+    background-color: #ff7eb9; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+button:hover {
+    background-color: #ff5eaa; 
+}
+
 

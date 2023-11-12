@@ -5,8 +5,9 @@ function Frats({events}) {
       <center class = "head-home">
         Frat
         </center>
-        {events.filter(fratp).map((event) => <h1>{event.name + " - "}</h1> )}
-        {events.filter(fratp).map((event) => <p>{event.location + "\n" + event.textArea + "\n\n"}</p>)}
+        {events.filter(fratp).map((event) => <h1>{event.name}</h1> )}
+        {events.filter(fratp).map((event) => <h2>{event.location}</h2> )}
+        {events.filter(fratp).map((event) => <p>{event.textArea}</p> )}
     </header>
     )
   }
