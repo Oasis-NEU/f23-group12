@@ -1,10 +1,13 @@
-function Concerts() {
+function Concerts({events}) {
+  const concertp = (event) => event.eventType === "Concert"
   return(
-    <header>
-      <center class = "concert-home">
+    <p>
+      <center>
         Concerts
         </center>
-    </header>
+        {events.filter(concertp).map((event) => <h1>{event.name + " - "}</h1> )}
+        {events.filter(concertp).map((event) => <p>{event.location + "\n" + event.textArea + "\n\n"}</p>)}
+    </p>
     )
   }
 

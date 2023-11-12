@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
-function AboutPage() {
-  const [formData, setFormData] = useState({
-    name: "",
-    location: "",
-    eventType: "",
-    textArea: "",
-  });
+function AboutPage({ formData, setFormData, setEvents, events }) {
   const [showFormData, setShowFormData] = useState(false);
 
   const handleInputChange = (e) => {
@@ -19,7 +13,25 @@ function AboutPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setShowFormData(true);
+    // setShowFormData(true);
+    // update Events array to include the new event
+
+    const newEvent = {
+      name: formData.name,
+      location: formData.location,
+    eventType: formData.eventType,
+    textArea: formData.textAreas,
+    }
+
+    setEvents([...events, newEvent])
+
+    
+    // reset form (Set all teh values in the form to "")
+    formData.name = ""
+    formData.location = ""
+    formData.eventType = ""
+    formData.textArea = ""
+    
   };
 
   return (
@@ -54,12 +66,11 @@ function AboutPage() {
             onChange={handleInputChange}
           >
             <option value=""></option>
-            <option value="club">Club</option>
-            <option value="frat">Frat</option>
-            <option value="food-and-drink">Food and Drink</option>
-            <option value="festival">Festival</option>
-            <option value="concert">Concert</option>
-            <option value="other">Other</option>
+            <option value="Club">Club</option>
+            <option value="Frat">Frat</option>
+            <option value="Food-And-Drink">Food and Drink</option>
+            <option value="Concert">Concert</option>
+            <option value="Other">Other</option>
           </select>
           <br />
           Description:
@@ -76,7 +87,7 @@ function AboutPage() {
         </center>
       </form>
 
-      {showFormData && (
+      {/* {showFormData && (
         <div>
           <h2>Form Data</h2>
           <p>Name: {formData.name}</p>
@@ -84,7 +95,7 @@ function AboutPage() {
           <p>Event Type: {formData.eventType}</p>
           <p>Description: {formData.textArea}</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

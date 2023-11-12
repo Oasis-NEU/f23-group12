@@ -6,6 +6,7 @@ import FoodDrink from './FoodDrink';
 import Concerts from './Concerts';
 import Other from './Other';
 import fratsoma from "./FratsomaLogo.png"
+import { useState } from "react";
 
 
 import * as React from "react";
@@ -19,14 +20,30 @@ import AboutPage from './Aboutpage';
 
 
 function App() {
+  // list of events (Set state array)
+  const [formData, setFormData] = useState({
+    name: "",
+    location: "",
+    eventType: "",
+    textArea: "",
+  });
 
-// 
+
+  const [events, setEvents] = useState([
+    {
+      name: "MIT Theta Tao",
+      location: "123 Street",
+      eventType: "Frat",
+      textArea: "Come to our frat! It is neon themed",
+    }
+  ]);
+  
 
  return (
   <Router>
       <header>
         <div id="logo">
-          <a href = "Home.js">
+          <a href = "/">
         <img src= {fratsoma} alt= "fratsoma"
         width="200"
         height="200"/> </a>
@@ -48,21 +65,21 @@ function App() {
 
   {
     <Routes>
-    <Route path="/upload-your-own-event" element={<AboutPage/>}>
+    <Route path="/upload-your-own-event" element={<AboutPage formData={formData} setFormData={setFormData} setEvents = {setEvents} events = {events}/>}>
     </Route>
     <Route path="/users" element={<AboutPage/>}>
     </Route>
     <Route path="/" element={<Home/>}>
     </Route>
-    <Route path="/clubs" element={<Clubs/>}>
+    <Route path="/clubs" element={<Clubs events = {events}/>}>
     </Route>
-    <Route path="/frats" element={<Frats/>}>
+    <Route path="/frats" element={<Frats events = {events}/>}>
     </Route>
-    <Route path="/concerts" element={<Concerts/>}>
+    <Route path="/concerts" element={<Concerts events = {events}/>}>
     </Route>
-    <Route path="/food-drinks" element={<FoodDrink/>}>
+    <Route path="/food-drinks" element={<FoodDrink events = {events}/>}>
     </Route>
-    <Route path="/other" element={<Other/>}>
+    <Route path="/other" element={<Other events = {events}/>}>
     </Route>
   </Routes>
   }
