@@ -21,7 +21,7 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
       name: formData.name,
       location: formData.location,
       eventType: formData.eventType,
-      textArea: formData.textAreas,
+      textArea: formData.textArea,
     }
 
     setEvents([...events, newEvent])
@@ -42,10 +42,10 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <center>
-          <header>
-            <big>Upload Your Own Event!!</big>
-          </header>
+        <center class = "upload-home">
+            Upload Your Own Event!!
+            </center>
+            <center>
           <label>
             Name of the Event:
             <input

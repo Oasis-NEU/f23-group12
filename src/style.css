@@ -52,6 +52,19 @@ a {
      #FF00DE, 0 0 15rem #FF00DE;
 }
 
+.upload-home{
+    color:white;
+    font-size: 60px;
+    font-family: Tahoma;
+    position:absolute;
+    text-align: center;
+    top: 450px;
+    left: 27%;
+    text-shadow: 0 0 1.5rem white, 0 0 3.5rem white, 0 0 5rem white,
+    0 0 7rem #FF00DE, 0 0 8rem #FF00DE, 0 0 10rem #FF00DE, 0 0 12rem
+     #FF00DE, 0 0 15rem #FF00DE;
+}
+
 .food-home{
     color:white;
     font-size: 60px;
