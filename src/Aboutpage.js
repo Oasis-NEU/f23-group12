@@ -91,16 +91,6 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
           <button type="submit">Create!</button>
         </center>
       </form>
-
-      {/* {showFormData && (
-        <div>
-          <h2>Form Data</h2>
-          <p>Name: {formData.name}</p>
-          <p>Location: {formData.location}</p>
-          <p>Event Type: {formData.eventType}</p>
-          <p>Description: {formData.textArea}</p>
-        </div>
-      )} */}
     </div>
   );
 }

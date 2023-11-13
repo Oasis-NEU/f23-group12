@@ -91,19 +91,7 @@ function App() {
     <Routes>
     <Route path="/upload-your-own-event" element={<AboutPage formData={formData} setFormData={setFormData} setEvents = {setEvents} events = {events}/>}>
     </Route>
-    <Route path="/users" element={<AboutPage/>}>
-    </Route>
     <Route path="/" element={<Home events={events}/>}>
-    </Route>
-    <Route path="/clubs" element={<Clubs events = {events}/>}>
-    </Route>
-    <Route path="/frats" element={<Frats events = {events}/>}>
-    </Route>
-    <Route path="/concerts" element={<Concerts events = {events}/>}>
-    </Route>
-    <Route path="/food-drinks" element={<FoodDrink events = {events}/>}>
-    </Route>
-    <Route path="/other" element={<Other events = {events}/>}>
     </Route>
   </Routes>
   }
