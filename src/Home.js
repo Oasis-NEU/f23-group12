@@ -61,12 +61,12 @@ function Home({ events }) {
           Filter: {formatFilterTitle(filter)}
           <br></br>
           <br />
-          <button className='space-around' onClick={() => setFilter("")}>No Filter</button>
-          <button className='space-around' onClick={() => setFilter("Frat")}>Frats</button>
-          <button className='space-around' onClick={() => setFilter("Food-And-Drink")}>Food & Drink</button>
-          <button className='space-around' onClick={() => setFilter("Concert")}>Concerts</button>
-          <button className='space-around' onClick={() => setFilter("Club")}>Clubs</button>
-          <button className='space-around' onClick={() => setFilter("Other")}>Other</button>
+          <button className='button-none' onClick={() => setFilter("")}>No Filter</button>
+          <button className='button-frat' onClick={() => setFilter("Frat")}>Frats</button>
+          <button className='button-food' onClick={() => setFilter("Food-And-Drink")}>Food & Drink</button>
+          <button className='button-concert' onClick={() => setFilter("Concert")}>Concerts</button>
+          <button className='button-club' onClick={() => setFilter("Club")}>Clubs</button>
+          <button className='button-other' onClick={() => setFilter("Other")}>Other</button>
 
         </center>
         <div className='event-container'>
