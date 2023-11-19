@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import {redirect } from "react-router-dom"
+import { redirect } from "react-router-dom"
+import useLocalStorageState from 'use-local-storage-state'
+
 
 function AboutPage({ formData, setFormData, setEvents, events }) {
-  const [showFormData, setShowFormData] = useState(false);
+  // const [showFormData, setShowFormData] = useLocalStorageState('formData', false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +28,7 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
 
     setEvents([...events, newEvent])
 
-    
+
     // reset form (Set all teh values in the form to "")
     setFormData({
       name: "",
@@ -36,16 +38,16 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
     })
 
     return redirect("/")
-    
+
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <center class = "upload-home">
-            Upload Your Own Event!!
-            </center>
-            <center>
+        <center class="upload-home">
+          Upload Your Own Event!!
+        </center>
+        <center>
           <label>
             Name of the Event:
             <input
