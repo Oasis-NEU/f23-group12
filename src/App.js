@@ -1,10 +1,5 @@
 import './App.css';
 import Home from './Home';
-import Clubs from './Clubs';
-import Frats from './Frats';
-import FoodDrink from './FoodDrink';
-import Concerts from './Concerts';
-import Other from './Other';
 import fratsoma from "./FratsomaLogo.png"
 import { useState } from "react";
 
@@ -89,7 +84,9 @@ function App() {
 
   {
     <Routes>
-    <Route path="/upload-your-own-event" element={<AboutPage formData={formData} setFormData={setFormData} setEvents = {setEvents} events = {events}/>}>
+    <Route path="/upload-your-own-event" element={<AboutPage 
+    formData={formData} setFormData={setFormData} setEvents = {setEvents} 
+    events = {events}/>}>
     </Route>
     <Route path="/" element={<Home events={events}/>}>
     </Route>
