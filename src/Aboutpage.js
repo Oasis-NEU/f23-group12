@@ -4,7 +4,6 @@ import useLocalStorageState from 'use-local-storage-state'
 
 
 function AboutPage({ formData, setFormData, setEvents, events }) {
-  // const [showFormData, setShowFormData] = useLocalStorageState('formData', false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;

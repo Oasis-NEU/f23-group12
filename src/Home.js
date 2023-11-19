@@ -1,10 +1,22 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import "./style.css"
+import useLocalStorageState from 'use-local-storage-state'
+
 
 
 function Home({ events }) {
-  const [filter, setFilter] = useState("")
+  const [filter, setFilter] = useLocalStorageState('filter', "")
+
+  const formatFilterTitle = (filter) => {
+    if (filter === "") {
+      return "None"
+    } else if (filter === "Food-And-Drink") {
+      return "Food & Drink"
+    } else {
+      return filter
+    }
+  }
 
   return (
     <label>
@@ -31,19 +43,25 @@ function Home({ events }) {
 
       <div>
         <center>
-        Filter: {filter === "" ? "None" : filter}
-        <br/>
-        <button onClick={() => setFilter("")}>No Filter</button>
-        <button onClick={() => setFilter("Frat")}>Frats</button>
-        <button onClick={() => setFilter("Food-And-Drink")}>Food & Drink</button>
-        <button onClick={() => setFilter("Concert")}>Concerts</button>
-        <button onClick={() => setFilter("Club")}>Clubs</button>
-        <button onClick={() => setFilter("Other")}>Other</button>
-        
+          Filter: {formatFilterTitle(filter)}
+          <br />
+          <button className='space-around' onClick={() => setFilter("")}>No Filter</button>
+          <button className='space-around' onClick={() => setFilter("Frat")}>Frats</button>
+          <button className='space-around' onClick={() => setFilter("Food-And-Drink")}>Food & Drink</button>
+          <button className='space-around' onClick={() => setFilter("Concert")}>Concerts</button>
+          <button className='space-around' onClick={() => setFilter("Club")}>Clubs</button>
+          <button className='space-around' onClick={() => setFilter("Other")}>Other</button>
+
         </center>
-        {events.filter((event) => { if (filter === "") { return true } else { return event.eventType === filter } }).map((event) => <p>{event.name} - {event.location} - {event.textArea}</p>)}
+        {events.filter((event) => {
+          if (filter === "") {
+            return true
+          } else {
+            return event.eventType === filter
+          }
+        }).map((event) => <p>{event.name} - {event.location} - {event.textArea}</p>)}
       </div>
-      
+
     </label>
 
   );
