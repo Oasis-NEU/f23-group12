@@ -15,8 +15,6 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // setShowFormData(true);
-    // update Events array to include the new event
 
     const newEvent = {
       name: formData.name,
@@ -28,7 +26,7 @@ function AboutPage({ formData, setFormData, setEvents, events }) {
     setEvents([...events, newEvent])
 
 
-    // reset form (Set all teh values in the form to "")
+    // reset form (Set all the values in the form to "")
     setFormData({
       name: "",
       location: "",

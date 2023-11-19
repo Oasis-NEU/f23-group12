@@ -44,6 +44,7 @@ function Home({ events }) {
       <div>
         <center>
           Filter: {formatFilterTitle(filter)}
+          <br></br>
           <br />
           <button className='space-around' onClick={() => setFilter("")}>No Filter</button>
           <button className='space-around' onClick={() => setFilter("Frat")}>Frats</button>

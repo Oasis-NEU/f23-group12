@@ -61,39 +61,6 @@ function App() {
     ]
   })
 
-  // const [events, setEvents] = useState([
-  //   {
-  //     name: "MIT Theta Tao",
-  //     location: "123 Street",
-  //     eventType: "Frat",
-  //     textArea: "Come to our frat! It is neon themed",
-  //   }, 
-  //   {
-  //     name: "A Boogie Concert",
-  //     location: "Matthew's Arena",
-  //     eventType: "Concert",
-  //     textArea: "CUP is hosting the homecoming concert!!",
-  //   },
-  //   {
-  //     name: "Snowport",
-  //     location: "Seaport Commons",
-  //     eventType: "Food-And-Drink",
-  //     textArea: "Seaport is having a winter festival! Come for shopping and Food and Drink. Available through 12/31",
-  //   },
-  //   {
-  //     name: "ICON",
-  //     location: "100 Warrenton St, Boston, MA",
-  //     eventType: "Club",
-  //     textArea: "ICON Club!! Come with friends",
-  //   },
-  //   {
-  //     name: "Lantern Festival",
-  //     location: "Charleston River",
-  //     eventType: "Other",
-  //     textArea: "See the beautiful laterns",
-  //   }
-  // ]);
-
 
   return (
     <Router>
