@@ -53,7 +53,6 @@ function Home({ events }) {
         you never miss out on the excitement that this incredible city has to
         offer. From the latest campus happenings to the hottest fraternity
         gatherings, Fratsoma has you covered
-        <br /><br />
       </center>
 
       <div>
