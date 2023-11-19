@@ -111,3 +111,39 @@ button:hover {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
 }
+
+.food-bg {
+    background-color: #ff7eb9 !important;
+}
+
+.frats-bg {
+    background-color: #330080 !important;
+    color: white;
+}
+
+.club-bg {
+    background-color: #7C0D8B !important;
+    color: white;
+}
+
+.concert-bg {
+    background-color: #FF00DE !important;
+    /* color: white; */
+}
+
+.list-row {
+    margin: 0.5rem;
+    background-color: #CFACEB;
+    border-radius: 0.125rem;
+    padding: 1rem;
+    width: 240px;
+    height: 180px;
+    /* grid-column: 1 / 3; */
+}
+
+.event-container {
+    display: flex;
+    flex-wrap: wrap;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-auto-rows: minmax(100px, auto); */
+}

@@ -18,6 +18,21 @@ function Home({ events }) {
     }
   }
 
+  const rowBg = (eventType) => {
+
+    console.log(eventType)
+
+    if (eventType === "Food-And-Drink") {
+      return "food-bg"
+    } else if (eventType === "Frat") {
+      return "frats-bg"
+    } else if (eventType === "Club") {
+      return "club-bg"
+    } else if (eventType === "Concert") {
+      return "concert-bg"
+    }
+  }
+
   return (
     <label>
       <header>
@@ -54,13 +69,25 @@ function Home({ events }) {
           <button className='space-around' onClick={() => setFilter("Other")}>Other</button>
 
         </center>
-        {events.filter((event) => {
-          if (filter === "") {
-            return true
-          } else {
-            return event.eventType === filter
-          }
-        }).map((event) => <p>{event.name} - {event.location} - {event.textArea}</p>)}
+        <div className='event-container'>
+
+          {events.filter((event) => {
+            if (filter === "") {
+              return true
+            } else {
+              return event.eventType === filter
+            }
+          }).map((event) => <div className={rowBg(event.eventType) + ' list-row'}>
+            <h3>{event.name}</h3>
+            <p><i>
+              {event.location}
+            </i></p>
+            <p>
+
+              {event.textArea}
+            </p>
+          </div>)}
+        </div>
       </div>
 
     </label>
