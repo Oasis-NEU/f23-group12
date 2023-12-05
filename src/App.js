@@ -26,7 +26,7 @@ function App() {
     textArea: "",
   });
 
-  const [events, setEvents] = useLocalStorageState("events", {
+  const [events, setEvents] = useffStorageState("events", {
     defaultValue: [
       {
         name: "MIT Theta Tao",
